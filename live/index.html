@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Black Bitches</title>
+        
+
+  </head>
+  
+  <body>
+    <h1>Black Bitches</h1>
+    
+    <canvas id="world" width="600" height="400">
+      <h1>You browser is old and you should feel bad</h1>
+    </canvas><br/>
+
+<input type="button" onclick="prev()" value="prev"/>
+<input type="button" onclick="back()" value="back"/>
+<input type="button" onclick="play()" value="play"/>
+<input type="button" onclick="stop()" value="stop"/>
+<input type="button" onclick="next()" value="next"/>
+
+  </body>
+
+
+    <script type="text/javascript">
+        var loaded_images   = 0;
+		    var total_images 	= 27;
+        var start = 0;
+        var img_counter = 0;		
+        self.stills = [];
+		
+        while(img_counter < total_images) { 
+          self.stills[img_counter] = new Image();
+		      self.stills[img_counter].onload = function() {
+	              if(++loaded_images >= total_images) {
+	                  play();
+                }
+		      };
+		      self.stills[img_counter].src = 'luna/shot_'+(img_counter + start)+'.jpg';
+          img_counter++;
+        }
+		
+		    /** Setup Canvas **/
+		    var canvas = document.getElementById('world');
+		    if (canvas.getContext){
+			    self.ctx = canvas.getContext('2d');
+		    }
+
+        var still=0;
+        function play() {
+          animation = setInterval(function(){
+            
+            next();
+          }, 100);
+        }
+
+        function back() {
+        animation = setInterval(function(){
+            
+            prev();
+          }, 100);
+        }
+
+        function draw() {
+             self.ctx.drawImage(self.stills[still], 0, 0);
+        }
+
+        function next(){
+          draw();          
+          if(++still>= total_images){
+              still = 0;
+          }
+        }
+
+        function prev(){
+          draw();          
+          if(--still<0){
+              still = total_images -1;
+          }
+        }
+
+        function stop(){
+            clearInterval(animation);
+         }
+    </script>
+</html>

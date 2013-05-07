@@ -3,6 +3,71 @@
 	<title>Desmitificando al Emprendedor</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript">
+	var loaded_images  = 0;
+	var start = 0;
+	var img_counter = 0;		
+	var still=0;
+	var stills = [];
+
+
+	function loadImages() {
+		while(img_counter < total_images) { 
+			stills[img_counter] = new Image();
+			stills[img_counter].onload = function() {
+				if(++loaded_images >= total_images) {
+					play();
+				}
+			};
+			stills[img_counter].src = 'shots/a_'+pad(img_counter + start, 3)+'.JPG';
+			img_counter++;
+		}
+		
+		/** Setup Canvas **/
+		var canvas = document.getElementById('world');
+		if (canvas.getContext){
+			self.ctx = canvas.getContext('2d');
+		}
+	}
+
+
+	function play() {
+		animation = setInterval(function(){
+			next();
+		}, 250);
+	}
+
+	function draw() {
+		self.ctx.drawImage(stills[still], 0, 0);
+	}
+
+	function next(){
+		draw();          
+		if(++still>= total_images){
+			still = 0;
+		}
+	}
+
+
+	function scriptLoaded(){
+		loadImages();
+	}
+
+	function load() {
+		var headID = document.getElementsByTagName("head")[0];         
+		var newScript = document.createElement('script');
+		newScript.type = 'text/javascript';
+		newScript.onload=scriptLoaded;
+		newScript.src = 'photos.js';
+		headID.appendChild(newScript);
+	}
+
+	function pad(n, width, z) {
+  		z = z || '0';
+  		n = n + '';
+  		return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+	}
+	</script>
 </head>
 <body>
 	<div class="sub_block">
@@ -43,7 +108,10 @@
 		<p>Segunda parte de juay the estarup</p>
 
 		<h1>Demystifying the Programmer</h1>
-		<p>Mostrar timelapse en vivo.</p>
+		<input type="button" onclick="load()" value="load"/><br>
+		<canvas id="world" width="600" height="400">
+      		<h1>You browser is old and you should feel bad</h1>
+    	</canvas><br/>
 
 		<p>Mostrar diagrama de flujo(on click replace with new images)</p>
 		

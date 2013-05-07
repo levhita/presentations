@@ -9,8 +9,9 @@
 	var img_counter = 0;		
 	var still=0;
 	var stills = [];
-
-
+	var self={};
+	
+	
 	function loadImages() {
 		while(img_counter < total_images) { 
 			stills[img_counter] = new Image();
@@ -29,7 +30,6 @@
 			self.ctx = canvas.getContext('2d');
 		}
 	}
-
 
 	function play() {
 		animation = setInterval(function(){
@@ -89,109 +89,129 @@
 <body>
 	<div class="sub_block">
 		<h1>Idea Generation/Market Exploration</h1>
-		<img src="images/idea_generation.jpg" width="350"/><img src="images/market_exploration.jpg" width="350"/>
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<img src="images/levhita_what.png" width="700"/>
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<img src="images/Challenge-Accepted.png" width="700"/>
 		
-		<ul>
-			<li><a href="http://en.wikipedia.org/wiki/Ideation_(idea_generation)">Ideation</a></li>
+		<div class="centered">
+			<img src="images/idea_generation.jpg" width="350"/><img src="images/market_exploration.jpg" width="350"/>
+		</div>
+
+		<div class="big_espace"></div>
+		
+		<img class="centered" src="images/levhita_what.png"/>
+		
+		<div class="espace"></div>
+		
+		<img class="centered" src="images/Challenge-Accepted.png"/>
+		
+		<div class="espace"></div>
+		
+		<ul class="big_ul nocolor">
+			<li><a href="http://en.wikipedia.org/wiki/Ideation_(idea_generation)">Ideation (idea generation)</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Brainstorming">Brainstorming</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Creativity">Creativity</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Creativity_techniques">Creativity Techniques</a></li>
-			<li><a href="http://leanstartupmachine.com/validationboard/">Validation Board</a></li>
 			<li><a href="http://www.youtube.com/watch?v=NugRZGDbPFU">Where God Ideas Come From</a></li>
 		</ul>
 		
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<img src="images/oncreativity.gif" width="700"/>
+		<div class="big_espace"></div>
 		
-
+		<img class="centered" src="images/oncreativity.gif"/>
+		
+		<div class="big_espace"></div>
+		
+		<img class="centered" src="images/mindblow.gif"/>
+		
+		<div class="big_espace"></div>
 
 		
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		
 		<h1>Demystifying the Entrepreneur</h1>
-		<img src="images/Sagmeister.jpg" width="233"/><img src="images/steve.jpg" width="233"/><img src="images/mark.jpg" width="233"/>
-		
+		<div class="centered">
+			<img src="images/Sagmeister.jpg" width="233"/><img src="images/steve.jpg" width="233"/><img src="images/mark.jpg" width="233"/>
+		</div>
 
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<h1>Demystifying the Creative</h1>
-		<img src="images/graph.png" width="700"/>
+			<div class="big_espace"></div>
+			<h1>Demystifying the Creative</h1>
+			<img class="centered" src="images/graph2.png"/>
+
+			<blockquote>
+				"To be creative you must get out of your comfort zone, allow your self to
+				experiment with new things, loose the fear to fail because there will always
+				be people better than you, learn from your errors an trough persistence
+				creativity will come."
+			</blockquote>
+
+			<div class="espace"></div>
+
+			<img class="centered" src="images/pablo.png"/>
+
+			<div class="espace"></div>
+
+			<img class="centered" src="images/sucking.gif"/>
+
+			<div class="big_espace"></div>
+
+			<h1>Demystifying the Business</h1>
+			<img class="centered_small" src="images/isaac.png" alt=""/>
+			<div class="espace"></div>
+			<img class="centered_small"  src="images/sales_1.png" alt=""/>
+			<div class="espace"></div>
+			<p class="big_centered">The basic maths look like this:</p>
+			<img class="centered_small"  src="images/sales_2.png" alt=""/>
+			<div class="espace"></div>
+			<p class="big_centered">If you look closer:</p>
+			<img class="centered_small"  src="images/inception.gif" alt=""/>
+			<p class="big_centered">Patterns emerge.</p>
+			<img class="centered_small"  src="images/sales_7.png" alt=""/>
+			<div class="espace"></div>
+			<img class="centered_small" src="images/sales_4.png" alt=""/>
+			<div class="espace"></div>
+			<img class="centered_small"  src="images/duplicate_quote.png" alt=""/>
+			<div class="espace"></div>
+			<img class="centered_small"  src="images/sales_5.png" alt=""/>
+			<img  class="centered" src="images/true_story.gif"  alt=""/>
+			
+			<h1>Demystifying the Programmer</h1>
+			<div class="centered">
+				<input type="button" onclick="load()" value="Load"/>
+				<input type="button" onclick="prev()" value="Prev"/>
+				<input type="button" onclick="back()" value="Backward"/>
+				<input type="button" onclick="stop()" value="Stop"/>
+				<input type="button" onclick="play()" value="Forward"/>
+				<input type="button" onclick="next()" value="Next"/>
+			</div>
+			<canvas style="display:block; margin:auto;" id="world" width="700" height="467">
+				<h1>You browser is old and you should feel bad</h1>
+			</canvas><br/>
 
 
-
-		<h1>Demystifying the Business</h1>
-		<p>Segunda parte de juay the estarup</p>
-
-		<h1>Demystifying the Programmer</h1>
-		<canvas id="world" width="700" height="467">
-			<h1>You browser is old and you should feel bad</h1>
-		</canvas><br/>
-		<input type="button" onclick="load()" value="load"/><br>
-		<input type="button" onclick="prev()" value="prev"/>
-		<input type="button" onclick="back()" value="back"/>
-		<input type="button" onclick="play()" value="play"/>
-		<input type="button" onclick="stop()" value="stop"/>
-		<input type="button" onclick="next()" value="next"/>
-
-		<p>Mostrar diagrama de flujo(on click replace with new images)</p>
-		
-
-		<h3>Tips:</h3>
-		<ul>
-			<li>Take a different path everyday
-			</ul>
-
-
-			<h3>Confort Zone:</h3>
-			<p>Aprende cosas fuera de tu área de confort</p>
-
-			<h3>Kiss for testing</h3>
-
-			<h3>Validation Board</h3>
-
-			<h3>Post-Its are your friends</h3>
-
-			<h3>Talk, Share, Spread and Confront your idea</h3>
-
-			<h3>Even if you are the only one around you out of 100,that like your idea, it still means that at least 1% percent of the world population will like it</h3>
-
-			<h3>Mix without shame, there are not original ideas</h3>
-
-			<h3>Everything seems imposible until someone makes it possible</h3>
-
-
-			---
-			He just did obssesive investigation of something, now he does exactly the same, but is famous soo... now is considered creative.
-
-			Living a life that is creative
-			---
-
-			"Make everything an art project"
-
-			"Move things around until they look right"
-			-- Milton Glaser
-			" The act itself is the path to discovery"
-			-- Milton Glaser
-
-			"Most significant works come of missunderstandings, because you don't know what you are doing"
-			-- Milton Glaser
-
-			http://oncreativity.tv/
-
-			||||||||||   Getting out of your Comfort Zone (Learing, Exploration)
-			||||||||||   Testing (Flexibility, Improvisation, Curiosity)
-			|||||||      There is people better than you (You are not good enough)
-			||||||       Avoid Fear of Fail (Make Mistakes, Learn from them)
-			||||||       Just Work (persistence)
-			||||         Everyone is Creative
-			||||         Vision (Integrity, Proud)
-			||||         Revolutionary (Transgresive, Disruptive)
-			|||          Perfection (Craftmanship, Hard Problems)
-			|||          Inspiration
-			||           Transformation
-			|            Money
+			<div class="espace"></div>
+			<div class="centered"><img src="images/taking_photos.png" onclick="this.src='images/taking_photos2.png'"/><img src="images/playing_photos.png" onclick="this.src='images/playing_photos2.png'"/></div>
+			<div class="espace"></div>
+			<img class="centered"  src="images/the-social-network-facemash.jpg" alt=""/>
+			<img class="centered"  src="images/Zuckerberg_facemash_wget.png" alt=""/>
+			<pre>"download all pictures in one page linux"</p>
+			<div class="espace"></div>
+			<blockquote>
+				"La universidad es solo un juego gigante de usar google, con retos, marcadores, jefes,  pruebas de tiempo, etc..."
+			</blockquote>
+			
+			<div class="big_espace"></div>
+			<h1>Demystifying the Entrepreneur</h1>
+			<div class="centered">
+				<img src="images/Sagmeister.jpg" width="233"/><img src="images/steve.jpg" width="233"/><img src="images/mark.jpg" width="233"/>
+			</div>
+			<div class="espace"></div>
+			<img class="centered_small"  src="images/lemonade.gif" alt=""/>
+			<blockquote>
+				"When life gives you lemons, make lemonade".
+			</blockquote>
+			<div class="big_espace"></div>
+			<blockquote>
+				"When life gives you lemons, make lemonade,<br/>
+				sell it, buy more lemons an sell more limonade.<br/>
+				Repeat until you have lemonade stand all over the country."
+			</blockquote>
+			<div class="big_espace"></div>
 		</div>
 	</body>
 	</html>

@@ -16,8 +16,35 @@
   div.sub_block {
     padding:20px;
   }
-  img {
+  img.centered {
+    display:block;
     text-align: center;
+    width:700px;
+    margin: auto;
+  }
+  img.centered_small {
+    display:block;
+    text-align: center;
+    margin: auto;
+  }
+  div.centered{
+    text-align: center;
+    margin: auto;
+  }
+  div.big_espace{
+    height:300px;
+  }
+  ul.big_ul li{
+    font-size: 30px;
+  }
+  .nocolor a {
+    color:black;
+  }
+  .nocolor a:visited {
+   color:black; 
+  }
+  div.espace{
+    height:100px;
   }
   video{
     display:block;
@@ -55,10 +82,11 @@
     font-weight:normal;
   }
 
-  .big {
-      text-align:center;
+  .big_centered {
+    text-align:center;
     font-size: 30px;
   }
+  
   hr {
     width:60%;
   }

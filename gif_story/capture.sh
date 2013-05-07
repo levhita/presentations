@@ -1,2 +1,2 @@
-gphoto2 --capture-image-and-download -I 10 --hook-script shot.sh 
+gphoto2 --capture-image-and-download -I 20 --hook-script shot.sh 
 

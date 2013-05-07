@@ -11,7 +11,7 @@ case "$ACTION" in
         ;;
     download)
         echo "$self: DOWNLOAD to $ARGUMENT"
-        mogrify -resize 600x $ARGUMENT
+        mogrify -resize 700x $ARGUMENT
         mv $ARGUMENT shots/$ARGUMENT
         cd shots
         ls *.JPG | awk 'BEGIN{ a=0 }{ printf "mv %s a_%03d.JPG\n", $0, a++ }' | bash

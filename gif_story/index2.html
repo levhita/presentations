@@ -48,6 +48,23 @@
 		}
 	}
 
+	function back() {
+		animation = setInterval(function(){
+			prev();
+		}, 250);
+	}
+
+	function prev(){
+		draw();          
+		if(--still<0){
+			still = total_images -1;
+		}
+	}
+
+	function stop(){
+		clearInterval(animation);
+	}
+
 
 	function scriptLoaded(){
 		loadImages();
@@ -63,9 +80,9 @@
 	}
 
 	function pad(n, width, z) {
-  		z = z || '0';
-  		n = n + '';
-  		return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+		z = z || '0';
+		n = n + '';
+		return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 	}
 	</script>
 </head>
@@ -108,10 +125,15 @@
 		<p>Segunda parte de juay the estarup</p>
 
 		<h1>Demystifying the Programmer</h1>
+		<canvas id="world" width="700" height="467">
+			<h1>You browser is old and you should feel bad</h1>
+		</canvas><br/>
 		<input type="button" onclick="load()" value="load"/><br>
-		<canvas id="world" width="600" height="400">
-      		<h1>You browser is old and you should feel bad</h1>
-    	</canvas><br/>
+		<input type="button" onclick="prev()" value="prev"/>
+		<input type="button" onclick="back()" value="back"/>
+		<input type="button" onclick="play()" value="play"/>
+		<input type="button" onclick="stop()" value="stop"/>
+		<input type="button" onclick="next()" value="next"/>
 
 		<p>Mostrar diagrama de flujo(on click replace with new images)</p>
 		

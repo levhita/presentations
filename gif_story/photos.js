@@ -1,1 +1,1 @@
-var total_images   = 18;
+var total_images   = 25;

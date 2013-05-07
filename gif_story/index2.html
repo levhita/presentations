@@ -75,7 +75,7 @@
 		var newScript = document.createElement('script');
 		newScript.type = 'text/javascript';
 		newScript.onload=scriptLoaded;
-		newScript.src = 'photos.js';
+		newScript.src = 'photos.js?v='+Math.floor(Math.random()*100);
 		headID.appendChild(newScript);
 	}
 

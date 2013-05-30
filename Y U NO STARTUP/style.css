@@ -1,0 +1,108 @@
+  html {
+    background-color:#222;
+    font-family: 'Droid Sans', Arial, sans-serif;
+    background-image: url(pattern.png);
+  }
+  body {
+    width:800px;
+    margin: 20px auto;
+    padding:0px;
+    background-color:#FFF;
+    border: 1px solid #333333;
+  }
+  h1, h2, h3 {
+    text-shadow: -2px 2px 2px #aaa;
+  }
+  div.sub_block {
+    padding:20px;
+  }
+  img {
+    display:block;
+    margin:auto;
+  }
+  .floaters {
+    text-align: center;
+  }
+  .floaters img {
+    display:inline;
+    margin:10px;
+  }
+  video{
+    display:block;
+    margin:auto;
+  }
+  .video {
+    text-align:center;
+  }
+  a{
+    color:#2F40FF;
+    font-weight:bolder;
+    text-decoration:none;
+  }
+  a:visited {
+    color:#5F6CFF;
+  }
+  a:hover {
+    text-decoration:underline;
+  }
+  pre {
+    font-family: 'Droid Sans Mono',  sans-serif;
+    text-align:center;
+    font-size: 30px;
+    font-weight:bolder;
+  }
+  blockquote {
+    font-family: 'Droid Serif', serif;
+    text-align:center;
+    font-size: 30px;
+    font-weight:bolder;
+  }
+  cite {
+    display:block;
+    text-align:right;
+    font-weight:normal;
+  }
+
+  .big {
+      text-align:center;
+    font-size: 30px;
+  }
+  hr {
+    width:60%;
+  }
+
+
+.big_centered {
+  font-size: 42px;
+  text-align: center;
+  padding-left:  100px;
+  padding-right:  100px;
+}
+.big_list {
+  font-size: 32px;
+  padding-left:  100px;
+  padding-right:  100px;
+}
+
+
+.extra_big_centered {
+  font-size: 54px;
+  text-align: center;
+  padding-left:  100px;
+  padding-right:  100px;
+  font-weight: bolder;
+}
+
+.big_left{
+  font-size: 42px;
+  text-align: left;
+  padding-left:  40px;
+  padding-right:  160px;
+}
+
+.big_right{
+  font-size: 42px;
+  text-align: right;
+  padding-left:  160px;
+  padding-right:  40px;
+}
